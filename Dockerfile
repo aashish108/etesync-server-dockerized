@@ -14,4 +14,4 @@ RUN source virtualenv/bin/activate
 RUN cd ../
 RUN git clone https://github.com/aashish108/etesync-server
 RUN cd etesync-server && pip3 install -r requirements.txt 
-RUN cd etesync-server && ls && pwd && ./manage.py migrate
+RUN cd etesync-server && pwd && ./manage.py migrate && ./manage.py runserver 0.0.0.0:8000
